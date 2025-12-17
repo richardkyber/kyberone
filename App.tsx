@@ -3,12 +3,12 @@ import { Logo } from './components/Logo';
 import { ChatDemo } from './components/ChatDemo';
 import { FeatureCard } from './components/FeatureCard';
 import { QR_CODE_URL } from './constants';
-import { 
-  MessageSquareText, 
-  Receipt, 
-  FileText, 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  MessageSquareText,
+  Receipt,
+  FileText,
+  ArrowRight,
+  CheckCircle2,
   Zap,
   Smartphone
 } from 'lucide-react';
@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-kyber-black text-kyber-light selection:bg-white selection:text-black overflow-x-hidden">
-      
+
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-kyber-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -26,15 +26,15 @@ const App = () => {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm font-medium hover:text-white transition-colors">Features</a>
             <a href="#how-it-works" className="text-sm font-medium hover:text-white transition-colors">How it works</a>
-            <a 
-              href="#get-started" 
+            <a
+              href="#get-started"
               className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors"
             >
               Start Now
             </a>
           </div>
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -60,48 +60,48 @@ const App = () => {
               </span>
               <span className="text-xs font-mono uppercase tracking-wider text-gray-300">Live on SMS & RCS</span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
               Your business,<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">run via text.</span>
             </h1>
-            
+
             <p className="text-lg text-gray-400 max-w-lg leading-relaxed">
-              No apps to download. No passwords to remember. 
-              Just text Kyber to get quotes, invoices, and expenses done instantly. 
-              Designed for industrial contractors who move fast.
+              No apps to download. No passwords to remember.
+              Just text Kyber to get quotes, invoices, and expenses done instantly.
+              Designed for contractors who move fast.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a 
+              <a
                 href="#get-started"
                 className="inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-all hover:scale-105"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="#features"
                 className="inline-flex items-center justify-center gap-2 bg-transparent border border-gray-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:border-gray-500 transition-colors"
               >
                 See Features
               </a>
             </div>
-            
+
             <div className="flex items-center gap-4 text-sm text-gray-500 pt-4">
               <div className="flex -space-x-2">
-                 <div className="w-8 h-8 rounded-full bg-gray-700 border-2 border-black"></div>
-                 <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-black"></div>
-                 <div className="w-8 h-8 rounded-full bg-gray-500 border-2 border-black"></div>
+                <div className="w-8 h-8 rounded-full bg-gray-700 border-2 border-black"></div>
+                <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-black"></div>
+                <div className="w-8 h-8 rounded-full bg-gray-500 border-2 border-black"></div>
               </div>
-              <p>Trusted by 500+ HVAC Pros</p>
+              <p>Trusted by 500+ Contractors & HVAC Pros</p>
             </div>
           </div>
 
           <div className="flex justify-center lg:justify-end relative">
-             {/* Decorative blob */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
-             <ChatDemo />
+            {/* Decorative blob */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+            <ChatDemo />
           </div>
         </div>
       </section>
@@ -110,23 +110,23 @@ const App = () => {
       <section id="features" className="py-24 bg-kyber-dark relative border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Everything you need.<br/>Nothing you don't.</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Everything you need.<br />Nothing you don't.</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">We stripped away the complicated dashboards. Kyber understands your natural language and context.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
-              title="Instant Quotes" 
+            <FeatureCard
+              title="Instant Quotes"
               description="Text the job details and markup. Kyber generates a professional PDF quote and emails it to you or your client instantly."
               icon={<FileText className="w-8 h-8" />}
             />
-            <FeatureCard 
-              title="Auto Invoicing" 
+            <FeatureCard
+              title="Auto Invoicing"
               description="Job done? Just tell Kyber. It pulls the quote data, converts it to an invoice, and sends it for payment collection."
               icon={<Receipt className="w-8 h-8" />}
             />
-            <FeatureCard 
-              title="Expense Tracking" 
+            <FeatureCard
+              title="Expense Tracking"
               description="Don't lose receipts. Snap a photo and text it to Kyber. It reads the data and categorizes it automatically."
               icon={<Zap className="w-8 h-8" />}
             />
@@ -139,16 +139,16 @@ const App = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent rounded-2xl blur-xl"></div>
-                <div className="relative bg-gray-900 border border-gray-800 p-8 rounded-2xl font-mono text-sm leading-loose text-gray-300 shadow-2xl">
-                    <p><span className="text-blue-400">User:</span> Need to bill Smith Residence. 3 hours labor, plus the compressor part.</p>
-                    <p className="mt-4"><span className="text-green-400">Kyber:</span> I found the open quote for Smith Residence. Adding compressor ($450) + 3hrs Labor ($255). Total Invoice: $705.</p>
-                    <p className="mt-4"><span className="text-green-400">Kyber:</span> Invoice #1024 sent to smith@email.com. </p>
-                    <p className="mt-4"><span className="text-blue-400">User:</span> Thanks.</p>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent rounded-2xl blur-xl"></div>
+              <div className="relative bg-gray-900 border border-gray-800 p-8 rounded-2xl font-mono text-sm leading-loose text-gray-300 shadow-2xl">
+                <p><span className="text-blue-400">User:</span> Need to bill Smith Residence. 3 hours labor, plus the compressor part.</p>
+                <p className="mt-4"><span className="text-green-400">Kyber:</span> I found the open quote for Smith Residence. Adding compressor ($450) + 3hrs Labor ($255). Total Invoice: $705.</p>
+                <p className="mt-4"><span className="text-green-400">Kyber:</span> Invoice #1024 sent to smith@email.com. </p>
+                <p className="mt-4"><span className="text-blue-400">User:</span> Thanks.</p>
+              </div>
             </div>
             <div className="order-1 lg:order-2 space-y-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white">Context aware.<br/>Business ready.</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white">Context aware.<br />Business ready.</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="flex-none w-8 h-8 rounded-full bg-white text-black flex items-center justify-center font-bold">1</div>
@@ -182,10 +182,10 @@ const App = () => {
         <div className="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
           {/* Industrial Texture Overlay */}
           <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-          
+
           <div className="relative z-10 flex flex-col items-center">
-            <Logo className="mb-8 invert" /> 
-            
+            <Logo className="mb-8 invert" />
+
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
               Ready to simplify?
             </h2>
@@ -194,13 +194,13 @@ const App = () => {
             </p>
 
             <div className="bg-black p-4 rounded-2xl shadow-2xl mb-8 group transition-transform hover:scale-105 duration-300">
-               <img 
-                 src={QR_CODE_URL} 
-                 alt="Scan to start Kyber" 
-                 className="w-48 h-48 md:w-56 md:h-56 rounded-xl bg-white"
-               />
+              <img
+                src={QR_CODE_URL}
+                alt="Scan to start Kyber"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-xl bg-white"
+              />
             </div>
-            
+
             <div className="flex items-center gap-2 text-sm font-bold text-black uppercase tracking-widest">
               <Smartphone className="w-4 h-4" />
               <span>Scan to Start Chat</span>
